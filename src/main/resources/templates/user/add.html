@@ -8,15 +8,28 @@
 
 <form method = 'post'>
     <div>
-        <p>Username: </p>
-        <input type="text"/>
-        <p>Email: </p>
-        <input type="email"/>
-        <p>Password: </p>
-        <input type="password"/>
+        <label>Username:
+            <input type="text" name="user"/>
+        </label>
     </div>
-
-    <input type = 'submit' value = 'Submit'/>
+    <div>
+        <label>Email:
+            <input type="email" name="email"/>
+        </label>
+    </div>
+    <div>
+        <label>Password:
+            <input type="password" name="password"/>
+        </label>
+    </div>
+    <div>
+        <label>Re-Enter Password:
+            <input type="password" name="verify"/>
+        </label>
+    </div>
+    <div>
+        <input type = 'submit' value = 'Submit'/>
+    </div>
 </form>
 
 </body>

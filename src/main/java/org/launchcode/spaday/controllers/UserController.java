@@ -8,21 +8,35 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.*;
+
 @Controller
 @RequestMapping("user")
 public class UserController {
 
-    public String customerForm () {
-        return "user/index.html";
+    private static List<User> users = new ArrayList<>();
+
+    @GetMapping
+    public String customerForm (Model model) {
+        model.addAttribute("username", "allU");
+        model.addAttribute("email", "allE");
+        model.addAttribute("password", "allP");
+        return "user/index";
     }
 
     @GetMapping("add")
-    public String displayAddUserForm() {
-        return "";
+    public String displayAddUserForm(Model model) {
+//        model.addAttribute();
+//        model.addAttribute();
+//        model.addAttribute();
+        return "user/add";
     }
 
     @PostMapping("add")
     public String displayAddUserForm(Model model, @ModelAttribute User user, String verify) {
+//        model.addAttribute();
+//        model.addAttribute();
+//        model.addAttribute();
         return "redirect:";
     }
 
