@@ -5,19 +5,6 @@
     <title>index</title>
 </head>
 <body>
-
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Name</th>
-        <th>Email</th>
-    </tr>
-    </thead>
-    <tr th:each="user : ${users}">
-        <td th:text="${user.name}"></td>
-        <td th:text="${user.email}"></td>
-    </tr>
-</table>
-
+    <a th:href="/" >Return to Home Page</a>
 </body>
 </html>

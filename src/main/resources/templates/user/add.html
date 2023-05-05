@@ -5,26 +5,25 @@
     <title>Add</title>
 </head>
 <body>
-
 <form method = 'post'>
     <div>
-        <label>Username:
-            <input type="text" name="user"/>
+        <label for="username">Username:
+            <input id="username" type="text" th:value="${username}" name="username"/>
         </label>
     </div>
     <div>
-        <label>Email:
-            <input type="email" name="email"/>
+        <label for="email">Email:
+            <input id="email" type="email" name="email"/>
         </label>
     </div>
     <div>
-        <label>Password:
-            <input type="password" name="password"/>
+        <label for="password">Password:
+            <input id="password" type="password" name="password"/>
         </label>
     </div>
     <div>
-        <label>Re-Enter Password:
-            <input type="password" name="verify"/>
+        <label for="verify">Re-Enter Password:
+            <input id="verify" type="password" name="verify"/>
         </label>
     </div>
     <div>
