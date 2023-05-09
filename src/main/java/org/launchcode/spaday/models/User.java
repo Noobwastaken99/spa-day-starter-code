@@ -5,7 +5,7 @@ import javax.validation.constraints.*;
 
 public class User {
 
-    @Valid
+    @NotBlank
     @Size(min = 5, max = 15, message = "Username has to be between 5-15 characters")
     private String username;
     @Email
