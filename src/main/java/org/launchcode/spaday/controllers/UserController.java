@@ -18,13 +18,8 @@ public class UserController {
         return "user/add";
     }
 
-    @PostMapping
+    @PostMapping //("/add")
     public String processAddUserForm(Model model, @ModelAttribute @Valid User user, Errors errors) {
-        model.addAttribute("user", user);
-        model.addAttribute("password", user.getPassword());
-        model.addAttribute("verifyPassword", user.getVerifyPassword());
-        model.addAttribute("username", user.getUsername());
-        model.addAttribute("email", user.getEmail());
         if (errors.hasErrors()) {
             return "user/add";
         }

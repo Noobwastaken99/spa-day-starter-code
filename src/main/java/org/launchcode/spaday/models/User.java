@@ -27,12 +27,6 @@ public class User {
         this.password = password;
     }
 
-    private void checkPassword() {
-        if (this.password != this.verifyPassword || this.password != null || this.verifyPassword != null) {
-            verifyPassword = null;
-        }
-    }
-
     public String getUsername() {
         return username;
     }
@@ -66,4 +60,11 @@ public class User {
         this.verifyPassword = verifyPassword;
         checkPassword();
     }
+
+    private void checkPassword() {
+        if (password != null && verifyPassword != null && !password.equals(verifyPassword)) {
+            verifyPassword = null;
+        }
+    }
+
 }
